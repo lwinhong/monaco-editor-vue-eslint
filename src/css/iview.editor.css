@@ -1,0 +1,98 @@
+﻿html, body, #app, fillMask {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.fillMask {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    z-index: 9999;
+    /*background-color: rgba(255, 255, 255, 0.5);*/
+    background-color: rgba(255, 255, 255);
+    top: 0;
+    position: absolute;
+    display: -webkit-box;
+    -webkit-box-orient: horizontal;
+    -webkit-box-pack: center;
+    -webkit-box-align: center;
+    /*display: -moz-box;
+    -moz-box-orient: horizontal;
+    -moz-box-pack: center;
+    -moz-box-align: center;
+
+    display: -o-box;
+    -o-box-orient: horizontal;
+    -o-box-pack: center;
+    -o-box-align: center;
+
+    display: -ms-box;
+    -ms-box-orient: horizontal;
+    -ms-box-pack: center;
+    -ms-box-align: center;
+
+    display: box;
+    box-orient: horizontal;
+    box-pack: center;
+    box-align: center;*/
+}
+
+    .fillMask img {
+        vertical-align: middle;
+    }
+
+    .fillMask span {
+        font-size: 14px;
+        color: #555;
+        vertical-align: middle;
+        padding-left: 16px;
+    }
+
+.code-editor .ivu-tabs-bar {
+    margin-bottom: 0;
+    background-color: rgb(238,238,240);
+}
+
+.code-editor .ivu-tabs {
+    height: 100%;
+}
+
+.code-editor .ivu-tabs-content {
+    position: absolute;
+    top: 37px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.code-editor .ivu-tabs-tabpane {
+    height: 100%;
+}
+
+.code-editor .editor_container {
+    height: 100%;
+}
+
+.code-editor .ivu-tabs .ivu-tabs-content-animated {
+    transition: 0s !important;
+}
+
+.code-editor .ivu-table-small td {
+    height: 25px;
+}
+
+.code-editor .ivu-table-small th {
+    height: 25px;
+}
+
+.code-editor .ivu-table-cell {
+    padding-left: 5px !important;
+    padding-right: 5px !important;
+}
+
+.code-editor .monaco-editor .bracket-match {
+    border: none;
+}

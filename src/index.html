@@ -1,0 +1,95 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>div editor</title>
+
+    <script type="text/javascript" src="iview/vue.min.js"></script>
+    <script src="iview/iview.min.js"></script>
+    <link rel="stylesheet" href="iview/iview.css">
+
+    <link rel="stylesheet" href="css/iviewindex.css" type="text/css" />
+    <link rel="stylesheet" href="css/iview.editor.css">
+    <script type="text/javascript" src="resource/jquery-3.3.1.js"></script>
+
+    <script type="text/javascript" src="dev/vs/loader.js"></script>
+    <script type="text/javascript" src="resource/vui_prototype.js"></script>
+    <script type="text/javascript" src="resource/tmp2935.js"></script>
+    <script type="text/javascript" src="resource/vui_save_handler.js"></script>
+    <script type="text/javascript" src="resource/vui_intelliSense_handler.js"></script>
+    <script type="text/javascript" src="resource/css_intelliSense_handler.js"></script>
+    <script type="text/javascript" src="resource/script_intelliSense_handler.js"></script>
+    <script type="text/javascript" src="resource/vui_hover_handler.js"></script>
+    <script type="text/javascript" src="resource/vui_validation.js"></script>
+    <script type="text/javascript" src="resource/vui_help.js"></script>
+    <script type="text/javascript" src="resource/editor_util.js"></script>
+    <script type="text/javascript" src="index.js"></script>
+    <script type="text/javascript" src="iviewindex.js"></script>
+    <script type="text/javascript" src="resource/VDevprojHandler.js"></script>
+    <script type="text/javascript" src="resource/vui-chart_handler.js"></script>
+</head>
+
+<body>
+    <div id="fillMask" class="fillMask">
+        <img src="resource/images/waitting.gif" />
+        <span>编辑器加载中，请稍后</span>
+    </div>
+    <!-- <div id="openChartSettings" class="openChartSettings">打开图表设计器</div> -->
+
+    <div class="chartSetting" id="openChartSettings">
+        <span>打开图表设计器</span>
+    </div>
+
+    <div id="app" class="code-editor">
+        <!--<i-row>
+        <i-col span="4">
+            <div id="left-toolbox">
+                <i-menu >
+                    <menu-item v-for="d in vuiMenuData" v-bind:name="d.name" v-text="d.title" draggable="true" ondragstart="drag(event)" v-bind:id="d.name"></menu-item>
+                </i-menu>
+            </div>
+        </i-col>
+        <i-col span="20">-->
+        <tabs v-model="selectedIndex" animated>
+            <tab-pane v-for="tab in tabs" v-bind:key="tab.key" v-bind:label="tab.value" v-html="tab.template"
+                v-bind:name="tab.key"></tab-pane>
+            <dropdown id="ddSaveAndClose" style="margin-right: 5px; margin-top: 2px;" v-bind:visible="visible" slot="extra"
+                trigger="custom" @on-click="handleClose">
+                <div class="dropBtn">
+                    <div class="save-close" onclick="saveAndClose(true);">
+                        <Icon type="android-list" class="iconsave" ></Icon><span>保存并关闭</span>
+                    </div>
+                    <!-- <div onclick="vm.handleOpen();" class="lable-down">
+                        <icon type="arrow-down-b"></icon>
+                    </div>  -->
+                </div>
+                <dropdown-menu slot="list" placement="bottom">
+                    <dropdown-item>
+                        <div onclick="saveAsEditor();vm.handleClose();">另存为</div>
+                    </dropdown-item>
+                    <dropdown-item divided="true">
+                        <div onclick="openImport();vm.handleClose();">打开文件</div>
+                    </dropdown-item>
+                </dropdown-menu>
+            </dropdown>
+
+        </tabs>
+        <!--</i-col>
+        </i-row>-->
+        <div id="foot-statusbar">
+            <div id="expander"></div>
+            <div id="controlboxs">
+                <img id="fixedOrFlowImg" src="../Images/flow.png" title="固定/浮动" />
+                <img id="errorCloseImg" src="../Images/close.png" title="关闭" />
+            </div>
+            <i-table v-bind:columns="errorMsgColumn" v-bind:data="errorData" size="small" v-bind:height="140"
+                v-on:on-row-dblclick="localError">
+            </i-table>
+        </div>
+
+    </div>
+    <script type="text/javascript" src="resource/iview.editor.js"></script>
+</body>
+
+</html>

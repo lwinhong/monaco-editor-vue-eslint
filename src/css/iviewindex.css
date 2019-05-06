@@ -1,0 +1,240 @@
+﻿/**************** MonacoEditor **************/
+
+.code-editor .minimap.slider-mouseover {
+    right: 8px !important;
+}
+
+.code-editor .decorationsOverviewRuler {
+    width: 8px !important;
+}
+
+.code-editor .scrollbar {
+    width: 8px !important;
+}
+
+    .code-editor .scrollbar .slider {
+        border-radius: 4px;
+    }
+
+    .code-editor .scrollbar .vertical .slider {
+        width: 8px !important;
+    }
+
+    .code-editor .scrollbar .vertical .slider {
+        height: 8px !important;
+    }
+
+/**************** MonacoEditor **************/
+
+
+/***************保存关闭按钮*******************/
+.dropBtn {
+    background-color: #faf8f8;
+    border: 1px solid transparent;
+    border-color: #dddee1;
+    border-radius: 2px;
+    color: #495060;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 12px;
+    line-height: 2.2;
+    outline: none;
+    padding-left: 10px;
+    padding-right: 5px;
+    padding-top: 1px;
+    transition: color .2s linear, background-color .2s linear, border .2s linear;
+    vertical-align: middle;
+    margin-top: 1px;
+}
+
+    .dropBtn:hover {
+        background: #e6e6e6;
+    }
+
+    .dropBtn img {
+        vertical-align: text-bottom;
+    }
+
+    .dropBtn .save-close {
+        cursor: default;
+        float: left;
+        margin-right: 4px;
+    }
+
+        .dropBtn .save-close .iconsave {
+            font-size: 17px;
+            vertical-align: middle;
+            position: relative;
+            top: -1px;
+            margin-right: 6px;
+        }
+
+    .dropBtn .lable-down {
+        border-left: 1px solid #dddee1;
+        float: right;
+        padding-left: 3px;
+        width: 15px;
+    }
+
+        .dropBtn .lable-down:hover {
+            background-color: #f7f7f7;
+            color: blue;
+        }
+/***************end 保存关闭按钮*********************/
+
+#expander {
+    width: 100%;
+    height: 3px;
+    border-bottom: 1px solid #cccccc;
+}
+
+    #expander:hover {
+        cursor: n-resize;
+    }
+
+#foot-statusbar {
+    bottom: -100%;
+    height: 140px;
+    left: 0;
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    vertical-align: middle;
+}
+
+#controlboxs {
+    top: 8px;
+    right: 7px;
+    z-index: 1050;
+    position: absolute;
+}
+#controlboxs img{
+    margin: 2px;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+#left-toolbox {
+    bottom: 0;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 170px;
+    position: fixed;
+    z-index: 997;
+}
+
+.code-editor .ivu-menu-vertical .ivu-menu-item, .ivu-menu-vertical .ivu-menu-submenu-title {
+    padding: 5px 15px 5px 15px !important;
+}
+
+.msg-redsquiggly {
+    background: url("data:image/svg+xml,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20height%3D'3'%20width%3D'6'%3E%3Cg%20fill%3D'%23ff0000'%3E%3Cpolygon%20points%3D'5.5%2C0%202.5%2C3%201.1%2C3%204.1%2C0'%2F%3E%3Cpolygon%20points%3D'4%2C0%206%2C2%206%2C0.6%205.4%2C0'%2F%3E%3Cpolygon%20points%3D'0%2C2%201%2C3%202.4%2C3%200%2C0.6'%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E") repeat-x bottom left;
+}
+
+.msg-greensquiggly {
+    background: url("data:image/svg+xml;utf8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20height%3D'3'%20width%3D'6'%3E%3Cg%20fill%3D'%23008000'%3E%3Cpolygon%20points%3D'5.5%2C0%202.5%2C3%201.1%2C3%204.1%2C0'%2F%3E%3Cpolygon%20points%3D'4%2C0%206%2C2%206%2C0.6%205.4%2C0'%2F%3E%3Cpolygon%20points%3D'0%2C2%201%2C3%202.4%2C3%200%2C0.6'%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E") repeat-x bottom left;
+}
+
+/*.error {
+    position: relative;
+}
+.error::before {
+    content: '';
+    position: absolute;
+    bottom: -0.125em;
+    width: 100%;
+    height: 0.18em;
+    background: -webkit-linear-gradient(315deg, transparent, transparent 45%, #dc3912, transparent 55%, transparent 100%), -webkit-linear-gradient(45deg, transparent, transparent 45%, #dc3912, transparent 55%, transparent 100%);
+    background: linear-gradient(135deg, transparent, transparent 45%, #dc3912, transparent 55%, transparent 100%), linear-gradient(45deg, transparent, transparent 45%, #dc3912, transparent 55%, transparent 100%);
+    background-size: 0.45em 0.5em;
+    background-repeat: repeat-x, repeat-x;
+}*/
+
+.inline-widgetcode-illegal:after {
+    /*content: '[[编码重复,请修正]]';*/
+    color: darkgreen;
+    background: yellow;
+}
+
+/*.inline-myGlyphMarginClass {
+    background: red;
+}*/
+
+.monaco-editor.vs .lineDecoration-error {
+    background: #ffcccc;
+    width: initial !important;
+    left: 0 !important;
+    right: 20px;
+}
+
+.monaco-editor.vs-dark .lineDecoration-error {
+    background: #2d0000;
+    width: initial !important;
+    left: 0 !important;
+    right: 20px;
+}
+
+
+
+/**************图表相关样式***************/
+
+.openChartSettings{
+    position:absolute;
+    top:24px;
+    left:24px;
+    background:#2196f3;
+    color:#fff;
+    font-size:12px;
+    line-height:2;
+    padding:0 8px;
+    border-radius:2px;
+    cursor:pointer;
+    z-index: 99999;
+    display: none;
+}
+
+ /*theme-light*/
+.chartSetting {
+    position: absolute;
+    top: 24px;
+    left: 24px;
+    width: 300px;
+    background:  url(../resource/images/icon-prop-light.png) #e4e5e9 8px center no-repeat;
+
+    color: #2196f3;
+    font-size: 12px;
+    line-height: 30px;
+    padding: 0 8px;
+    border-radius: 2px;
+    cursor: pointer;
+    z-index: 99999;
+    display: none;
+}
+.chartSetting span {
+    display: block;
+    text-indent:20px;
+    background: url(../resource/images/icon-enter-light.png) right center no-repeat;
+}
+/*theme-dark*/
+.monaco-editor.vs-dark .chartSetting {
+    position: absolute;
+    top: 150px;
+    left: 150px;
+    width: 300px;
+    background:  url(../resource/images/icon-prop-dark.png) #343537 8px center no-repeat;
+    color: #2196f3;
+    font-size: 12px;
+    line-height: 30px;
+    padding: 0 8px;
+    border-radius: 2px;
+    cursor: pointer;
+    z-index: 99999;
+    display: none;
+}
+
+.monaco-editor.vs-dark .chartSetting span {
+    display: block;
+    text-indent:20px;
+    background: url(../resource/images/icon-enter-dark.png) right center no-repeat;
+}
