@@ -152,7 +152,7 @@ function checkAndAddErrorInfo(editorKeys) {
             $.each(editor.model._decorations, function (index, d) {
                 if (d.options.className === "squiggly-error") {
                     pass = false;
-                    addErrorInfo(d.options.hoverMessage.value,
+                    addErrorInfo(d.options.hoverMessage ? d.options.hoverMessage.value : "意外的错误",
                         d.range, editorName);
                 }
             });
@@ -459,6 +459,7 @@ var jsValidationHandler = (function () {
                 checkAndAddErrorInfo(editors);
             });
         }
+
         // var editors = [editorKey.javascript, editorKey.moduleJavaScript, editorKey.script];
         // return checkAndAddErrorInfo(editors);
     }

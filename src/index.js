@@ -143,8 +143,8 @@ function parseComponentVue(source) {
         if (pc.template)
             source.Template = pc.template.content.trim()
         if (pc.script)
-            source.Script = pc.script.content
-        console.log("parse:" + source.Template)
+            source.Script = pc.script.content.trim()
+        //console.log("parse:" + source.Template)
     } catch (error) {
         console.error(error)
     }
