@@ -34,7 +34,7 @@
     "file-loader": "^2.0.0",
     "fs-extra": "^7.0.0",
     "material-design-icons": "^3.0.1",
-    "monaco-editor": "^0.15.6",
+    "monaco-editor": "^0.17.0",
     "npm-run-all": "^4.1.2",
     "pako": "^1.0.6",
     "postcss-loader": "^3.0.0",

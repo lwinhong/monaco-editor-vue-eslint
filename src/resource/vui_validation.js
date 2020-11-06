@@ -305,6 +305,10 @@ var htmlValidationHandler = (function () {
                 errorMessage = String.format(tmp, "[" + code + "]");
                 isPass = false;
             } else {
+                // if (source && source.substr(0, 1) === ":") {
+                //     //动态的编码不校验
+                // } else
+                
                 if (!widgetCodeReg.test(code)) {
                     var tmp1 = "无效的编码%1，只能包含字母(A-Z,a-z)、数字(0-9)、下划线(_)。\r\n只能以字母开头，且不能以下划线结尾。";
                     hoverMessage = String.format(tmp1, "");

@@ -10,7 +10,7 @@ var vuiDataHandler = (function () {
      * 匹配widget-code
      */
     var widgetCodeReg = /widget-code\s{0,}=\s{0,}["']\s{0,}([\w\S-\.]+)\s{0,}["']/i;
-    var widgetCodeRegGlobal = /widget-code\s{0,}=\s{0,}["']\s{0,}([\w\S-\.]{0,})\s{0,}["']/gi;
+    var widgetCodeRegGlobal = /[:]{0,}widget-code\s{0,}=\s{0,}["']\s{0,}([\w\S-\.]{0,})\s{0,}["']/gi;
     var handleEventReg = /handleEvent\s{0,}\(\s{0,}'([^<](\w|\s|-)*)'/gi;
     var emitEventReg = /\$emit\s{0,}\(\s{0,}'([^<](\w|\s|-)*)'/gi;
     var propReg = /([\w-:\.]+)(\s*=\s*)("[^"]*"|'[^']*')/g;
@@ -123,6 +123,8 @@ var vuiDataHandler = (function () {
         while (true) {
             var results = reg.exec(sourceString);
             if (results) {
+                if (results[0].substr(0, 1) === ":")
+                    continue;
                 var result = results[1];
                 var code = isTrimCode ? result.trim() : result;
                 if (isReturnCodeAndSource) {
